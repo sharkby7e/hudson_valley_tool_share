@@ -1,5 +1,4 @@
 import { getTools } from "~/server/queries";
-import { db } from "../../server/db/index";
 import Link from "next/link";
 
 export default async function Tools() {
