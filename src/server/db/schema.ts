@@ -42,7 +42,7 @@ export const posts = createTable(
   }),
 );
 
-export const tools = createTable("tool", {
+export const tools = createTable("tools", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 256 }),
   createdAt: timestamp("created_at", { withTimezone: true })
