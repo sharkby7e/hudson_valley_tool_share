@@ -17,9 +17,7 @@ import { type AdapterAccount } from "next-auth/adapters";
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const createTable = pgTableCreator(
-  (name) => `hudson_valley_tool_share_${name}`,
-);
+export const createTable = pgTableCreator((name) => `hvts_${name}`);
 
 export const posts = createTable(
   "post",
