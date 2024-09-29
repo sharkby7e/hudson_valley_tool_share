@@ -14,7 +14,7 @@ let db: VercelPgDatabase<typeof schema> | PostgresJsDatabase<typeof schema>;
 if (process.env.NODE_ENV === "production") {
   db = VercelDrizzle(sql, { schema });
 } else {
-  const migrationClient = postgres(process.env.POSTGRES_URL as string);
+  const migrationClient = postgres(process.env.POSTGRES_URL!);
   db = LocalDrizzle(migrationClient, { schema });
 }
 
